@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D5AB91C8-9653-41B7-9F05-279961571C08}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CRMS</RootNamespace>
+    <AssemblyName>CRMS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Office, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CasesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CasesList.Designer.cs">
+      <DependentUpon>CasesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Charts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Charts.Designer.cs">
+      <DependentUpon>Charts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartsDataSet1.cs">
+      <DependentUpon>ChartsDataSet1.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ChartsDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChartsDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Chat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chat.designer.cs">
+      <DependentUpon>Chat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChatServer.cs" />
+    <Compile Include="ComplainantsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComplainantsList.Designer.cs">
+      <DependentUpon>ComplainantsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComplaintsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComplaintsList.Designer.cs">
+      <DependentUpon>ComplaintsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSDataSet.cs">
+      <DependentUpon>CRMSDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DisposalsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisposalsList.Designer.cs">
+      <DependentUpon>DisposalsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FIRList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FIRList.Designer.cs">
+      <DependentUpon>FIRList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FIRReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FIRReport.Designer.cs">
+      <DependentUpon>FIRReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewAcc.Designer.cs">
+      <DependentUpon>NewAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewCase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewCase.Designer.cs">
+      <DependentUpon>NewCase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewCaseDisposal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewCaseDisposal.Designer.cs">
+      <DependentUpon>NewCaseDisposal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewComplainant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewComplainant.Designer.cs">
+      <DependentUpon>NewComplainant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewComplaint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewComplaint.Designer.cs">
+      <DependentUpon>NewComplaint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewFIR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewFIR.Designer.cs">
+      <DependentUpon>NewFIR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewSuspect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewSuspect.Designer.cs">
+      <DependentUpon>NewSuspect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfficersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OfficersList.Designer.cs">
+      <DependentUpon>OfficersList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchDataSet1.cs">
+      <DependentUpon>SearchDataSet1.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SearchDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SearchDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SuspectsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuspectsList.Designer.cs">
+      <DependentUpon>SuspectsList.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasesList.resx">
+      <DependentUpon>CasesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Charts.resx">
+      <DependentUpon>Charts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chat.resx">
+      <DependentUpon>Chat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComplainantsList.resx">
+      <DependentUpon>ComplainantsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComplaintsList.resx">
+      <DependentUpon>ComplaintsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisposalsList.resx">
+      <DependentUpon>DisposalsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FIRList.resx">
+      <DependentUpon>FIRList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FIRReport.resx">
+      <DependentUpon>FIRReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewAcc.resx">
+      <DependentUpon>NewAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewCase.resx">
+      <DependentUpon>NewCase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewCaseDisposal.resx">
+      <DependentUpon>NewCaseDisposal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewComplainant.resx">
+      <DependentUpon>NewComplainant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewComplaint.resx">
+      <DependentUpon>NewComplaint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFIR.resx">
+      <DependentUpon>NewFIR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewSuspect.resx">
+      <DependentUpon>NewSuspect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficersList.resx">
+      <DependentUpon>OfficersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SuspectsList.resx">
+      <DependentUpon>SuspectsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ChartsDataSet1.xsc">
+      <DependentUpon>ChartsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ChartsDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChartsDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ChartsDataSet1.xss">
+      <DependentUpon>ChartsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet.xsc">
+      <DependentUpon>CRMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRMSDataSet.xss">
+      <DependentUpon>CRMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SearchDataSet1.xsc">
+      <DependentUpon>SearchDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SearchDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SearchDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SearchDataSet1.xss">
+      <DependentUpon>SearchDataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Photo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SJ1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\water.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
